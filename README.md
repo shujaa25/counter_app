@@ -4,4 +4,4 @@ It allows a user to set a specific target value and when that limit reaches it v
 
 Screenshots:
 
-![image](https://user-images.githubusercontent.com/38812037/161631977-706707f6-1fdd-42a0-b65f-ef6186230ae1.png)
+![image](https://user-images.githubusercontent.com/38812037/161632137-6baf9c73-2e91-4ae6-b4de-f2f348adc2e5.png)
