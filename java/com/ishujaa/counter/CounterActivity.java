@@ -44,7 +44,7 @@ public class CounterActivity extends AppCompatActivity {
             if(++countValue == targetValue){
                 buttonCountUp.setEnabled(false);
                 counterEnabled = false;
-                vibrate();
+                vibrate(1000);
                 try{
                     wait(1500);
                 }catch (Exception e){
@@ -71,9 +71,9 @@ public class CounterActivity extends AppCompatActivity {
         return super.dispatchKeyEvent(event);
     }
 
-    private void vibrate(){
+    private void vibrate(int millis){
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        vibrator.vibrate(1000);
+        vibrator.vibrate(millis);
     }
 
     @Override
@@ -107,6 +107,7 @@ public class CounterActivity extends AppCompatActivity {
         buttonCountUp = findViewById(R.id.btn_count);
         buttonCountUp.setOnClickListener(view -> {
             countUp();
+            vibrate(100);
         });
     }
 
