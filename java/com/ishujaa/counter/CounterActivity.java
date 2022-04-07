@@ -35,6 +35,7 @@ public class CounterActivity extends AppCompatActivity {
         countValue = 0;
         buttonSetCount.setEnabled(true);
         editTextSetCount.setEnabled(true);
+        editTextSetCount.setText("");
         setCounterValue();
 
     }
@@ -53,6 +54,7 @@ public class CounterActivity extends AppCompatActivity {
                 sendNotification("Count Reached.", String.valueOf(countValue));
             }
             setCounterValue();
+            vibrate(100);
         }
     }
 
@@ -107,7 +109,6 @@ public class CounterActivity extends AppCompatActivity {
         buttonCountUp = findViewById(R.id.btn_count);
         buttonCountUp.setOnClickListener(view -> {
             countUp();
-            vibrate(100);
         });
     }
 
